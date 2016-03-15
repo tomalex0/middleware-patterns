@@ -7,9 +7,10 @@ app.use(function (req, res, next) {
   next();
 }, kraken());
 
+
 app.on('start', function () {
   if (require.main === module) {
-    app.listen(8000).on('listening', function () {
+    app.listen(8001).on('listening', function () {
       console.log('[env: %s] listening on %d ...', app.kraken.get('env:env'), this.address().port);
     });
   } else {

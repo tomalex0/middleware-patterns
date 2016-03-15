@@ -9,13 +9,14 @@
     "kraken-js": "^1.0.5"
   },
   "devDependencies": {
+    "http-proxy-middleware": "^0.10.0",
     "supertest": "^0.15.0",
     "tape": "^4.0.0"
   },
   "scripts": {
     "whitelist": "NODE_ENV=whitelist npm start",
     "blacklist": "NODE_ENV=blacklist npm start",
-    "subapp": "NODE_ENV=subapp npm start",
+    "subapp": "set NODE_ENV=subapp npm start",
     "subapp-standalone": "node sub",
     "start": "node .",
     "test": "node test"
